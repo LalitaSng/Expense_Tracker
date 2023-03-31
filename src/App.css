@@ -1,38 +1,106 @@
-.App {
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+:root{
+  --box-shadow : 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+}
+
+* {
+  box-sizing : border-box;
+}
+
+body{
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'lato', sans-serif;
+}
+
+.container{
+  width: 350px;
+  margin: 30px auto;
+}
+
+.income-expense-container{
+  background-color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  box-shadow: var(--box-shadow);
+  margin: 20px 0;
+}
+
+.income-expense-container > div {
+  flex: 1;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.income-expense-container > div:first-of-type  {
+  border-right: 2px solid #dedede;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.money{
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin: 5px 0px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.money.plus{
+  color: green;
 }
 
-.App-link {
-  color: #61dafb;
+.money.minus{
+  color: red;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1{
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+h3{
+  border-bottom: 1px solid #bbb;
+  padding-bottom: 10px;
+  margin: 40px 0 10px;
+}
+
+h4{
+  margin: 0;
+  text-transform: uppercase;
+}
+
+label{
+  display: inline-block;
+  margin: 10px 0;
+}
+
+input[type='text'],
+input[type='number']{
+  border: 1px solid #dedede;
+  border-radius: 2px ;
+  display: block;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: #9c88ff;
+  box-shadow: var(--box-shadow);
+  color: #fff;
+  border: 0;
+  display: block;
+  font-size: 16px;
+  margin: 10px 0 30px;
+  padding: 10px;
+  width: 100%;
+}
+
+.btn:focus,
+.delete-btn:focus {
+  outline: 0;
 }
